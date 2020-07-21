@@ -2,12 +2,12 @@ import json
 import jsonschema
 
 SCHEMA_PATH="resources/acnh_schema.json"
-DOCUEMENT_PATH="resources/acnh.json"
+DOCUMENT_PATH="resources/acnh.json"
 
 with open(SCHEMA_PATH) as f:
     schema = json.loads(f.read())
 
-with open(DOCUEMENT_PATH) as f:
+with open(DOCUMENT_PATH) as f:
     document = json.loads(f.read())
 
 validator = jsonschema.Draft7Validator(schema)
