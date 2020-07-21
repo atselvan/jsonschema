@@ -1,0 +1,85 @@
+{
+  "title": "Animal Crossing : New Horizons",
+  "short": "ACNH",
+  "platforms": {
+    "company": "Nintendo",
+    "console": "Switch"
+  },
+  "data": {
+    "critters": {
+      "fish": [
+        {
+          "name": "Clown Fish",
+          "shadow_size": 1,
+          "tags": [
+            "black",
+            "orange"
+          ],
+          "seasonality": {
+            "all_day": true,
+            "seasons": [
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep"
+            ]
+          },
+          "price": 800,
+          "alt_price": 1000
+        },
+        {
+          "name": "Blue Marlin",
+          "shadow_size": 5,
+          "tags": [
+            "black",
+            "blue"
+          ],
+          "seasonality": {
+            "all_day": true,
+            "seasons": [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Nov",
+              "Dec"
+            ]
+          },
+          "price": 10000,
+          "alt_price": 15000
+        }
+      ],
+      "bugs": [
+        {
+          "name": "Emperor Butterfly",
+          "shadow_size": 0,
+          "tags": [
+            "black",
+            "blue"
+          ],
+          "seasonality": {
+            "all_day": true,
+            "seasons": [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Nov",
+              "Dec"
+            ]
+          },
+          "price": 4000,
+          "alt_price": 5000
+        }
+      ]
+    }
+  }
+}

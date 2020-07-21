@@ -1,0 +1,110 @@
+{
+  "$id": "https://jsonschema.privatesquare.in/acnh_schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACNH Schema",
+  "type": "object",
+  "required": ["title", "short", "platforms", "data"],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "short": {
+      "type": "string"
+    },
+    "platform": {
+        "$ref": "#/definitions/platform"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "critters": {
+          "type": "object",
+          "properties": {
+            "fish": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/critter"
+              }
+            },
+            "bugs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/critter"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "platform": {
+      "type": "object",
+      "required": [
+        "company",
+        "console"
+      ],
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "console": {
+          "type": "string"
+        }
+      }
+    },
+    "critter": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "shadow_size": {
+          "type": "integer"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "seasonality": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "all_day": {
+              "type": "boolean"
+            },
+            "seasons": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Jan",
+                  "Feb",
+                  "Mar",
+                  "Apr",
+                  "May",
+                  "Jun",
+                  "Jul",
+                  "Aug",
+                  "Sep",
+                  "Oct",
+                  "Nov",
+                  "Dec"
+                ]
+              }
+            },
+            "price": {
+              "type": "string"
+            },
+            "alt_price": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
