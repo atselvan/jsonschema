@@ -3,7 +3,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "ACNH Schema",
   "type": "object",
-  "required": ["title", "short", "platforms", "data"],
+  "required": [
+    "title",
+    "short",
+    "platforms",
+    "data"
+  ],
   "properties": {
     "title": {
       "type": "string"
@@ -12,10 +17,13 @@
       "type": "string"
     },
     "platform": {
-        "$ref": "#/definitions/platform"
+      "$ref": "#/definitions/platform"
     },
     "data": {
       "type": "object",
+      "required": [
+        "critters"
+      ],
       "properties": {
         "critters": {
           "type": "object",
@@ -55,7 +63,12 @@
     },
     "critter": {
       "type": "object",
-      "required": [],
+      "required": [
+        "name",
+        "shadow_size",
+        "tags",
+        "seasonality"
+      ],
       "properties": {
         "name": {
           "type": "string"
@@ -71,7 +84,10 @@
         },
         "seasonality": {
           "type": "object",
-          "required": [],
+          "required": [
+            "all_day",
+            "seasons"
+          ],
           "properties": {
             "all_day": {
               "type": "boolean"
@@ -95,14 +111,14 @@
                   "Dec"
                 ]
               }
-            },
-            "price": {
-              "type": "string"
-            },
-            "alt_price": {
-              "type": "string"
             }
           }
+        },
+        "price": {
+          "type": "integer"
+        },
+        "alt_price": {
+          "type": "integer"
         }
       }
     }
